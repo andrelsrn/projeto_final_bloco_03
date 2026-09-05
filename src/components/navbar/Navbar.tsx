@@ -6,13 +6,11 @@ export function Navbar() {
     <header className="w-full bg-[#2e3192] text-white flex justify-center py-4 shadow-md">
       <div className="container flex justify-between items-center text-sm px-4">
         
-        {/* Link no Logo para Home */}
         <Link to="/home" className="flex items-center gap-2 text-2xl font-bold cursor-pointer">
           <span className="text-red-600 text-3xl font-black">+</span>
           <span className="tracking-widest uppercase">Farmácia</span>
         </Link>
 
-        {/* Barra de Pesquisa */}
         <div className="flex items-center w-1/3 bg-white rounded overflow-hidden">
           <input 
             type="text" 
@@ -24,10 +22,13 @@ export function Navbar() {
           </button>
         </div>
 
-        {/* Menus e Ícones */}
         <div className="flex gap-6 items-center">
-          <span className="hover:underline cursor-pointer">Categorias</span>
-          <span className="hover:underline cursor-pointer">Cadastrar Categoria</span>
+          <Link to="/categorias" className="hover:underline cursor-pointer">
+            Categorias
+          </Link>
+          <Link to="/cadastrarcategoria" className="hover:underline cursor-pointer">
+            Cadastrar Categoria
+          </Link>
           <User size={24} className="cursor-pointer" />
           <ShoppingCart size={24} className="cursor-pointer" />
         </div>
